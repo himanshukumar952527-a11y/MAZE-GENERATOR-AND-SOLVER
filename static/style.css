@@ -1,0 +1,99 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================= BODY ================= */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #000000, #0f2027);
+  color: #ffffff;
+  text-align: center;
+  min-height: 100vh;
+}
+
+/* ================= TITLE ================= */
+h2 {
+  margin-top: 20px;
+  font-size: 2.2rem;
+  color: #00ff88;
+  text-shadow: 0 0 4px rgba(0,255,136,0.4); /* reduced */
+}
+
+/* ================= CONTROLS ================= */
+.controls {
+  margin: 20px 0;
+}
+
+/* ================= INPUT ================= */
+input {
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  width: 80px;
+  text-align: center;
+  font-weight: bold;
+  background: #111;
+  color: #00ff88;
+  box-shadow: 0 0 3px rgba(0,255,136,0.4); /* reduced */
+}
+
+/* ================= BUTTON ================= */
+button {
+  margin: 8px;
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  background: linear-gradient(135deg, #00ff88, #00c3ff);
+  color: black;
+  transition: 0.25s ease;
+}
+
+button:hover {
+  transform: scale(1.05); /* reduced */
+  box-shadow: 0 0 8px rgba(0,255,136,0.4); /* reduced */
+}
+
+/* ================= CANVAS CONTAINER ================= */
+.canvas-container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+/* ================= CANVAS BOX ================= */
+.canvas-box {
+  background: rgba(255, 255, 255, 0.04);
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.08); /* reduced */
+  backdrop-filter: blur(6px); /* reduced */
+}
+
+/* ================= CANVAS ================= */
+canvas {
+  background: black;
+  border: 2px solid rgba(0,255,136,0.6); /* softer */
+  border-radius: 10px;
+}
+
+/* ================= STATUS ================= */
+#status {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  color: #00ff88;
+  text-shadow: 0 0 3px rgba(0,255,136,0.4); /* reduced */
+}
+
+/* ================= HEADINGS ================= */
+h3 {
+  margin-bottom: 10px;
+  color: #00c3ff;
+  text-shadow: 0 0 3px rgba(0,195,255,0.4); /* reduced */
+}

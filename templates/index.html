@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Maze Generator & Solver</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<h2>Maze Generator & Solver 🧩</h2>
+
+<div class="controls">
+    <input type="number" id="gridSize" value="21" min="5" step="2">
+
+    <!-- MODE BUTTONS -->
+    <button onclick="setMode('dfs')">DFS (C)</button>
+    <button onclick="setMode('bfs')">BFS (C)</button>
+    <button onclick="setMode('prim')">PRIM ⭐</button>
+
+    <br>
+
+    <!-- ACTION BUTTONS -->
+    <button onclick="generateMaze()">Generate</button>
+    <button onclick="solveMaze()">Solve</button>
+</div>
+
+<div class="canvas-container">
+
+    <div class="canvas-box">
+        <h3>Maze</h3>
+        <canvas id="canvas"></canvas>
+    </div>
+
+    <div class="canvas-box">
+        <h3>BFS Solution ⚡</h3>
+        <canvas id="bfsCanvas"></canvas>
+    </div>
+
+    <div class="canvas-box">
+        <h3>DFS Solution ⚡</h3>
+        <canvas id="dfsCanvas"></canvas>
+    </div>
+
+</div>
+
+<!-- STATUS -->
+<div id="status">Mode: DFS (C)</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

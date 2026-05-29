@@ -1,0 +1,5 @@
+*.exe
+.vscode/
+__pycache__/
+progress.json
+output.json

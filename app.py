@@ -3,7 +3,7 @@ import subprocess, json, random
 
 app = Flask(__name__)
 
-# ===== PRIM (NATURAL LOOPS) =====
+# Prim(Natural loopsS)
 def generate_prim_natural(n, loop_prob=0.15):
     maze = [[1]*n for _ in range(n)]
     dirs = [(-2,0),(2,0),(0,-2),(0,2)]
@@ -50,8 +50,8 @@ def run_solver(grid):
 
     # subprocess.run(["gcc","maze_solver.c","-o","solver.exe"],check=True)
     # subprocess.run(["solver.exe"],check=True)
-    subprocess.run(["gcc","maze_solver.c","-o","solver.exe"],check=True)
-    subprocess.run(["solver.exe"],check=True)
+    subprocess.run(["gcc","maze_solver.c","-o","solver"],check=True)
+    subprocess.run(["./solver"],check=True)
 
     with open("output.json") as f:
         return json.load(f)

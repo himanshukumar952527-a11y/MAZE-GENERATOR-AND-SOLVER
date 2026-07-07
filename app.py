@@ -37,7 +37,7 @@ def generate_prim_natural(n, loop_prob=0.15):
     return maze
 
 
-# ===== SOLVER =====
+# Solver
 def run_solver(grid):
     n = len(grid)
 
@@ -48,6 +48,8 @@ def run_solver(grid):
         f.write("1 1\n")
         f.write(f"{n-2} {n-2}\n")
 
+    # subprocess.run(["gcc","maze_solver.c","-o","solver.exe"],check=True)
+    # subprocess.run(["solver.exe"],check=True)
     subprocess.run(["gcc","maze_solver.c","-o","solver.exe"],check=True)
     subprocess.run(["solver.exe"],check=True)
 
@@ -70,7 +72,7 @@ def generate():
     if size % 2 == 0:
         size += 1
 
-    # ===== MODE HANDLING =====
+    #  MODE HANDLING 
     if mode == "prim":
         grid = generate_prim_natural(size)
         method = "PRIM (NATURAL LOOPS)"
@@ -80,9 +82,10 @@ def generate():
         # DFS/BFS via C program
         method_flag = 1 if mode == "dfs" else 2
 
-        subprocess.run(["gcc","maze_making.c","-o","maker.exe"],check=True)
-        subprocess.run(["maker.exe",str(size),str(method_flag)],check=True)
-
+        # subprocess.run(["gcc","maze_making.c","-o","maker.exe"],check=True)
+        # subprocess.run(["maker.exe",str(size),str(method_flag)],check=True)
+        subprocess.run(["gcc","maze_making.c","-o","maker"],check=True)
+        subprocess.run(["./maker",str(size),str(method_flag)],check=True)
         grid = []
         steps = None
 
